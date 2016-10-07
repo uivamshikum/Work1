@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+
+function load() {
+        var divs = document.getElementsByTagName("div"); 
+for (var i=0; i < divs.length; i++) { 
+
+     //var data = divs[i].getAttribute("data-click");    
+     divs[i].addEventListener("click",function(e){
+     		alert(e.target.getAttribute("data-click"));
+     });
+   
+}
+
+}
+window.onload = load;
+
+</script>
+</head>
+<body>
+
+
+<h3>Each div should alert the value in its data-click attribute when clicked. Currently there is a bug. Find and fix it.</h3>
+
+<div data-click="Clicking div 1">Div 1</div>
+<br>
+<div data-click="Clicking div 2">Div 2</div>
+<br>
+<div data-click="Clicking div 3">Div 3</div>
+</body>
+</html>
